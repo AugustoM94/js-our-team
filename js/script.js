@@ -30,8 +30,7 @@ const members = [
         photo: 'barbara-ramos-graphic-designer.jpg'
     }
 ];
-const rowEl = document.querySelector('.row')
-
+const rowEl = document.querySelector('.row');
 
 for (let i = 0; i < members.length; i++){
 
@@ -46,9 +45,9 @@ function printCol(members) {
     const col = document.createElement('div');
     col.classList.add('col-4')
     const template = `
-    <div class="card text-start">
+    <div class="card text-start m-3">
         <img src="img/${members.name} ${members.role}.jpg" alt="image">
-       <div class="card-body">
+       <div class="card-body m-2">
         <h4 class="card-title">${members.name}</h4>
         <p class='card-text'>
         <ul>
@@ -70,12 +69,15 @@ const newMembers = {
         name: document.getElementById('name').value,
         role: document.getElementById('role').value,
         picture: document.getElementById('picture').value
+
 }
 members.push(newMembers);
 printCol(newMembers);
-btnReset();
+btnReset()
 })
-btnReset.addEventListener('click', function btnReset(){
+
+
+btnReset.addEventListener('click', function (){
     
    document.getElementById('name').value = "",
    document.getElementById('role').value = "",
