@@ -61,3 +61,24 @@ function printCol(members) {
 
    rowEl.append(col);   
 }
+
+const btnSend = document.getElementById('send')
+const btnReset = document.getElementById('reset')
+
+btnSend.addEventListener('click', function(){
+const newMembers = {
+        name: document.getElementById('name').value,
+        role: document.getElementById('role').value,
+        picture: document.getElementById('picture').value
+}
+members.push(newMembers);
+printCol(newMembers);
+btnReset();
+})
+btnReset.addEventListener('click', function btnReset(){
+    
+   document.getElementById('name').value = "",
+   document.getElementById('role').value = "",
+    document.getElementById('picture').value = ""
+
+})
